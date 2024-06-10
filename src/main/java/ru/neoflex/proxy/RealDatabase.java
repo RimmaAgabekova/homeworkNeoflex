@@ -1,16 +1,12 @@
 package ru.neoflex.proxy;
 
-public class RealDatabase implements DataBase {
-    private final String dataBaseName;
+public class RealDatabase implements DataBaseConnection {
 
-    public RealDatabase(String dataBaseName) {
-        this.dataBaseName = dataBaseName;
-    }
+    private static final String DATABASE_NAME = "proxy_db";
 
     @Override
     public void connect() {
-        System.out.println("Соединение с базой данных - " + dataBaseName);
-
+        System.out.println(DATABASE_NAME);
     }
 
 }

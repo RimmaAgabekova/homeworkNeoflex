@@ -1,5 +1,6 @@
 package ru.neoflex.proxy;
 
-public interface DataBase {
+public interface DataBaseConnection {
+
     void connect();
 }
